@@ -1,0 +1,169 @@
+/* Define CSS variables for colors, fonts, and sizes */
+:root {
+    --green500: hsl(158, 36%, 37%); /* Green color */
+    --green700: hsl(158, 42%, 18%); /* Dark green color */
+    --black: hsl(212, 21%, 14%); /* Black color */
+    --grey: hsl(228, 12%, 48%); /* Grey color */
+    --cream: hsl(30, 38%, 92%); /* Cream color */
+    --white: hsl(0, 0%, 100%); /* White color */
+    --fontParagraph: 14px; /* Base font size */
+    --fraunces: "Fraunces", serif; /* Fraunces font */
+    --montserrat: "Montserrat", serif; /* Montserrat font */
+}
+
+/* Style for the html and body elements to occupy full height */
+html, body {
+    height: 100%; /* Full height */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    background-color: var(--cream); /* Background color */
+    font-size: var(--fontParagraph); /* Base font size */
+    font-family: var(--montserrat); /* Montserrat font */
+    flex-direction: column; /* Makes HTML to display in column */
+}
+
+/* Style for the main container */
+main {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items horizontally */
+    background-color: var(--white); /* Background color */
+    border-radius: 2vh; /* Rounded corners */
+}
+
+/* Style for the main image */
+.mainImage {
+    background-image: url(../../images/image-product-mobile.jpg); /* Mobile background image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+/* Style for the main info container */
+.mainInfoContainer {
+    margin: 2vh; /* Margin around the container */
+}
+
+/* Style for the main category text */
+.mainCategory {
+    text-transform: uppercase; /* Uppercase text */
+    font-family: var(--montserrat); /* Montserrat font */
+    color: var(--grey); /* Grey color */
+    letter-spacing: 4px; /* Letter spacing */
+    font-weight: 500; /* Font weight */
+}
+
+/* Style for the main brand text */
+.mainBrand {
+    margin: 0; /* No margin */
+    font-family: var(--fraunces); /* Fraunces font */
+    line-height: 3vh; /* Line height */
+    margin-top: 2vh; /* Top margin */
+    font-size: 30px; /* Font size */
+}
+
+/* Style for the main description text */
+.mainDescription {
+    margin-top: 2vh; /* Top margin */
+    margin-bottom: 2vh; /* Bottom margin */
+    text-align: left; /* Left text alignment */
+    color: var(--grey); /* Grey color */
+    font-family: var(--montserrat); /* Montserrat font */
+}
+
+/* Style for the main prices container */
+.mainPrices {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 2vh; /* Bottom margin */
+}
+
+/* Style for the new price text */
+.mainPriceNew {
+    font-family: var(--fraunces); /* Fraunces font */
+    font-size: 25px; /* Font size */
+    color: var(--green500); /* Green color */
+    font-weight: 700; /* Font weight */
+}
+
+/* Style for the last price text */
+.mainPriceLast {
+    font-family: var(--montserrat); /* Montserrat font */
+    color: var(--grey); /* Grey color */
+    text-decoration: line-through; /* Strikethrough text */
+    margin-left: 2vh; /* Left margin */
+}
+
+/* Style for the add to cart button */
+.addToCart {
+    border-radius: 1vh; /* Rounded corners */
+    display: inline-block; /* Inline block display */
+    width: 100%; /* Full width */
+    padding: 2vh; /* Padding */
+    color: white; /* White text color */
+    background-color: var(--green500); /* Green background color */
+    font-family: var(--montserrat); /* Montserrat font */
+    text-decoration: none; /* No text decoration */
+    font-weight: 700; /* Font weight */
+    display: flex; /* Use flexbox for layout */
+    text-align: center; /* Center text alignment */
+    justify-content: center; /* Center items horizontally */
+}
+
+.addToCart span {
+    margin-left: 1vh; /* Left margin */
+}
+
+.addToCart:hover {
+    background-color: var(--green700); /* Dark green background color on hover */
+}
+
+/* Style for the footer */
+footer {
+    margin-top: 2vh; /* Top margin */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 1439px) {
+    main {
+        width: 95%; /* Full width */
+        height: auto; /* Automatic height */
+        border-radius: 2vh; /* Rounded corners */
+        flex-direction: column; /* Arrange items in a column */
+    }
+    .mainImage {
+        width: 100%; /* Full width */
+        height: 30vh; /* Fixed height */
+        border-radius: 1vh 1vh 0vh 0vh; /* Rounded corners */
+    }
+    .mainCategory {
+        letter-spacing: 3px; /* Letter spacing */
+    }
+}
+
+/* Media query for desktop screens */
+@media (min-width: 1440px) {
+    .mainImage {
+        background-image: url(../../images/image-product-desktop.jpg); /* Desktop background image */
+        width: 28vh; /* Fixed width */
+        height: 100%; /* Fixed height */
+        border-radius: 1vh 0vh 0vh 1vh; /* Rounded corners */
+    }
+    .mainInfoContainer {
+        width: 25vh; /* Fixed width */
+        padding-top: 0px; /* No top padding */
+    }
+}
+
+/* Style for the attribution text */
+.attribution {
+    font-size: 11px; /* Font size */
+    text-align: left; /* Left text alignment */
+    color: black; /* Text color */
+}
+
+/* Style for the attribution links */
+.attribution a {
+    color: green; /* Link color */
+}
